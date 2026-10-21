@@ -1,0 +1,23 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # seen = {}
+        # for i, v in enumerate(nums):
+        #     if target - v in seen:
+        #         return [seen[target - v], i]
+        #     seen[v] = i
+        # return None
+        
+        # seen = {} #value -> index 
+        # for index, value in enumerate(nums):
+        #     diff = target - value 
+        #     if diff in seen: 
+        #         return [seen[diff], index]
+        #     seen[value] = index
+
+        seen = {}
+        for index, value in enumerate(nums):
+            diff = target - value 
+            if diff in seen: 
+                return [seen[diff], index]
+            seen[value] = index 
+        return None 
